@@ -4,8 +4,7 @@ import * as React from 'react';
 import ReactDOM from 'react-dom';
 import styles from '../styles/Home.module.css';
 import Button from '@mui/material/Button';
-
-
+import MediaCard from '../components/MediaCard/MediaCard';
 
 export default function Home() {
   return (
@@ -20,12 +19,12 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Melshtastic!</a>
         </h1>
+        <MediaCard></MediaCard>
 
         <Button variant="text">Text</Button>
-<Button variant="contained">Contained</Button>
-<Button variant="outlined">Outlined</Button>
+        <Button variant="contained">Contained</Button>
+        <Button variant="outlined">Outlined</Button>
       </main>
-
       <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
