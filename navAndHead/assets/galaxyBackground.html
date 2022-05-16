@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Background</title>
+    <style>
+        html,
+        body,
+        svg{
+            width: 100%;
+            height: 100%;
+        }
+        .stop-1{
+            stop-color: rgb(29, 4, 132);
+        }
+        .stop-2{
+            stop-color: rgb(15, 10, 33);
+            stop-opacity: 100%;
+        }
+        .linear-stop-1{
+            stop-color: white;
+        }
+        .linear-stop-2{
+            stop-color: #f6ea02;
+        }
+    </style>
+</head>
+<body>
+<!-- <svg id="a" viewBox="0 0 346.28 199.51"> -->
+    <svg>
+        <symbol id="black-sky">
+            <filter id="filter">
+                <feTurbulence baseFrequency="0.3" seed="9" />
+                <!-- Ro = wR * R + wG * G + wB * B + wA * A + C  -->
+                <feColorMatrix values="0 0 0 9 -4
+                                       0 0 0 9 -4
+                                       0 0 0 9 -4
+                                       0 0 0 0 1" />
+                
+            </filter>
+            <rect filter="url(#filter)" width="100%" height="100%" />
+        </symbol>
+        <symbol id="stars">
+            <defs>
+                <radialGradient id="gradient2" >
+                    <stop class="linear-stop-1" offset="0"/>
+                    <stop class="linear-stop-2" offset="1" stop-color="#faef5e" />
+                </radialGradient>
+            </defs>
+            <circle cx="19.63" cy="97.32" r="19.13" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" />
+            <circle cx="52.81" cy="175.58" r="5.43" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".28" />
+            <circle cx="93.46" cy="78.19" r="5.43" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".28" />
+            <circle cx="111.94" cy="138.4" r="9.13" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".48" />
+            <circle cx="131.08" cy="14.71" r="9.13" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".48" />
+            <circle cx="61.94" cy="59.07" r="9.13" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".48" />
+            <circle cx="336.91" cy="190.14" r="9.13" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".48" />
+            <circle cx="191.72" cy="152.97" r="5.43" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".28" />
+            <circle cx="215.2" cy="89.06" r="5.43" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".28" />
+            <circle cx="155.2" cy="102.75" r="5.43" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".28" />
+            <circle cx="319.12" cy="5.58" r="5.43" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".28" />
+            <circle cx="265.7" cy="102.75" r="5.43" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".28" />
+            <circle cx="147.04" cy="33.95" r="2.72" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".14" />
+            <circle cx="176.66" cy="61.77" r="2.72" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".14" />
+            <circle cx="213.68" cy="36.66" r="2.72" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".14" />
+            <circle cx="227.47" cy="14.71" r="2.72" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".14" />
+            <circle cx="277.77" cy="49.94" r="2.72" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".14" />
+        </symbol>
+        <defs>
+            <linearGradient id="Gradient1" x1="0" x2="0" y1="0" y2="1">
+              <stop class="stop-1" offset="0%"/>
+              <stop class="stop-2" offset="100%"/>
+            </linearGradient>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#Gradient1") /> 
+        <use href="#black-sky" opacity="30%"/>
+        <use href="#stars" />
+    </svg>
+</body>
+</html>
+
