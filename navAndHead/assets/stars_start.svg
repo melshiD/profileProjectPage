@@ -1,0 +1,31 @@
+                .linear-stop-1{
+            stop-color: white;
+        }
+        .linear-stop-2{
+            stop-color: #f6ea02;
+        }
+        <!-- <symbol id="stars">
+            <defs>
+                <radialGradient id="gradient2" >
+                    <stop class="linear-stop-1" offset="0"/>
+                    <stop class="linear-stop-2" offset="1" stop-color="#faef5e" />
+                </radialGradient>
+            </defs>
+            <circle cx="19.63" cy="97.32" r="19.13" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" />
+            <circle cx="52.81" cy="175.58" r="5.43" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".28" />
+            <circle cx="93.46" cy="78.19" r="5.43" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".28" />
+            <circle cx="111.94" cy="138.4" r="9.13" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".48" />
+            <circle cx="131.08" cy="14.71" r="9.13" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".48" />
+            <circle cx="61.94" cy="59.07" r="9.13" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".48" />
+            <circle cx="336.91" cy="190.14" r="9.13" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".48" />
+            <circle cx="191.72" cy="152.97" r="5.43" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".28" />
+            <circle cx="215.2" cy="89.06" r="5.43" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".28" />
+            <circle cx="155.2" cy="102.75" r="5.43" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".28" />
+            <circle cx="319.12" cy="5.58" r="5.43" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".28" />
+            <circle cx="265.7" cy="102.75" r="5.43" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".28" />
+            <circle cx="147.04" cy="33.95" r="2.72" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".14" />
+            <circle cx="176.66" cy="61.77" r="2.72" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".14" />
+            <circle cx="213.68" cy="36.66" r="2.72" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".14" />
+            <circle cx="227.47" cy="14.71" r="2.72" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".14" />
+            <circle cx="277.77" cy="49.94" r="2.72" fill="url(#gradient2)" stroke="#231f20" stroke-miterlimit="10" stroke-width=".14" />
+        </symbol>

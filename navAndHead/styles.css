@@ -2,7 +2,7 @@ html,
 body{
     width: 100%;
     height: 100%;
-    background-image: url('./assets/simpleStaryBackground.svg');
+    background-image: url('./assets/galaxyBackground.svg');
     background-size: cover;
     transition: all 2s;
     background-color: #1d242c;
@@ -34,8 +34,8 @@ body{
     padding-bottom: 0;
     padding-top: 0;
     background-color: black;
-    animation: dissapear 2s forwards;
-    animation-delay: 2.5s;
+    /* animation: dissapear 2s forwards;
+    animation-delay: 2.5s; */
 }
 @keyframes dissapear{
     to{
