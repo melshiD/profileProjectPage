@@ -1,0 +1,46 @@
+.main-selection-area{
+    opacity: 0%;
+    width: 40%;
+    height: 60%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: space-around;
+    background-color: black;
+    position: relative;
+    border-radius: 1em;
+    border: black solid 2px;
+    margin: 4em auto auto 7em;
+    transform: perspective(1000px) rotatex(25deg);
+    animation: 2s appear 3s forwards;
+}
+.main-selection-area .selection{
+    box-sizing: border-box;
+    padding: 1em;
+    width: 30%;
+    height: 20%;
+    border-radius: 3px;
+    background-color: pink;
+    margin: 3px;
+    transform: perspective(1000px) rotateX(0deg);
+    transform-origin: bottom;
+}
+.main-selection-area .selection:hover{
+    animation: change-perspective 0.4s forwards;
+}
+@keyframes change-perspective{
+    from{
+        transform: perspective(1000px) rotateX(0deg);
+    }
+    to{
+        transform: perspective(1000px) rotateX(-50deg);
+    }
+}
+@keyframes appear {
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 90%;
+    }
+}
