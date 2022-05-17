@@ -13,7 +13,6 @@
         integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
-    <!-- <script src="https://r105.threejsfundamentals.org/threejs/resources/threejs/r105/js/controls/OrbitControls.js"></script> -->
     <script src="https://threejs.org/examples/js/controls/TransformControls.js"></script>
     <!-- <script src="./node_modules/three/examples/jsm/controls/TransformControls.js"></script> -->
     <!-- ask Dustin about ways to utilize the modules within just an html doc  -->
@@ -32,7 +31,7 @@
     </div>
     <script src="viewbox.js"></script>
 
-    <div class="main-selection-area">
+    <div class="main-selection-area" id="mainSelectionArea">
         <div class="selection"></div>
         <div class="selection"></div>
         <div class="selection"></div>
@@ -44,6 +43,15 @@
         <div class="selection"></div>
         <div class="selection"></div>
     </div>
+    <script>
+        //animate opacity of main selection area and rotation on first hover
+        let mainSelectionArea = document.getElementById('mainSelectionArea');
+        let onMainSelectionAreaFocus = (e) => {
+            TweenMax.to(mainSelectionArea, 0.4, {rotationX: '0', transformOrigin: 'center'} );
+            console.log('hovering hovering hovering');
+        }
+        mainSelectionArea.addEventListener('mouseover', onMainSelectionAreaFocus);
+    </script>
 </body>
 
 </html>

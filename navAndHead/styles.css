@@ -9,11 +9,16 @@ body{
     overflow-x: hidden;
 }
 * {
-    --blue-0: #4474b7;
-    --blue-1: #182d78;
-    --blue-2: #0808ab;
-    --blue-3: #02145d;
-    --blue-4: #000642;
+    /* --git-color-0: #13093D;
+    --git-color-1: #0D062A;
+    --git-color-2: #0E0532;
+    --git-color-3: #1C143D;
+    --git-color-4: #110449; */
+    --git-color-0: #3a8bfb;
+    --git-color-1: #2e53da;
+    --git-color-2: #1e3cb1;
+    --git-color-3: #1010ac;
+    --git-color-4: #000da2;
     --stroke-width: 2%;
     --commit-border-opacity: 0.14;
     --day-transition-duration: 750ms;
@@ -79,44 +84,39 @@ svg{
 }
 
 .emptyDay {
-    fill: var(--blue-0);
+    fill: var(--git-color-0);
     stroke: rgba(27, 31, 35, 0.06);
     stroke-width: 2px;
+    /* rx: 0.05%; */
     rx: 0.15%;
     transition: all var(--day-transition-duration);
 }
 .emptyDay.commit-1{
-    fill: var(--blue-1);
+    fill: var(--git-color-1);
     stroke: rgba(255, 255, 255, var(--commit-border-opacity));
     stroke-width: 2px;
     transition: all var(--day-transition-duration);
 }
 .emptyDay.commit-2{
-    fill: var(--blue-2);
+    fill: var(--git-color-2);
     stroke: rgba(255, 255, 255, var(--commit-border-opacity));
     stroke-width: 2px;
     transition: all var(--day-transition-duration);
 }
 .emptyDay.commit-3{
-    fill: var(--blue-3);
+    fill: var(--git-color-3);
     stroke: rgba(255, 255, 255, var(--commit-border-opacity));
     stroke-width: 10px;
     transition: all var(--day-transition-duration);
 }
 .emptyDay.commit-4, .emptyDay.commit-5, .emptyDay.commit-6{
-    fill: var(--blue-4);
+    fill: var(--git-color-4);
     stroke: rgba(255, 255, 255, var(--commit-border-opacity));
     stroke-width: 2px;
     transition: all var(--day-transition-duration);
 }
 .emptyDay.commit-7{
     fill: #23439d;
-    stroke: rgba(255, 255, 255, var(--commit-border-opacity));
-    stroke-width: 2px;
-    transition: all var(--day-transition-duration);
-}
-.emptyDay.commit-red{
-    fill: #c70221;
     stroke: rgba(255, 255, 255, var(--commit-border-opacity));
     stroke-width: 2px;
     transition: all var(--day-transition-duration);

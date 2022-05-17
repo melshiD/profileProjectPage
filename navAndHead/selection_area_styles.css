@@ -1,5 +1,5 @@
 .main-selection-area{
-    opacity: 0%;
+    opacity: 100%;
     width: 40%;
     height: 60%;
     display: flex;
@@ -11,8 +11,7 @@
     border-radius: 1em;
     border: black solid 2px;
     margin: 4em auto auto 7em;
-    transform: perspective(1000px) rotatex(25deg);
-    animation: 2s appear 3s forwards;
+    transform: perspective(1000px) rotateX(25deg);
 }
 .main-selection-area .selection{
     box-sizing: border-box;
@@ -24,23 +23,16 @@
     margin: 3px;
     transform: perspective(1000px) rotateX(0deg);
     transform-origin: bottom;
+    transition: all .4s;
 }
 .main-selection-area .selection:hover{
-    animation: change-perspective 0.4s forwards;
+    transform: scale(1.02);
 }
-@keyframes change-perspective{
+@keyframes focusOnItem{
     from{
-        transform: perspective(1000px) rotateX(0deg);
+        transform: scale(1);
     }
     to{
-        transform: perspective(1000px) rotateX(-50deg);
-    }
-}
-@keyframes appear {
-    from{
-        opacity: 0%;
-    }
-    to{
-        opacity: 90%;
+        transform: scale(1.05);
     }
 }
