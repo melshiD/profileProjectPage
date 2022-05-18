@@ -19,7 +19,74 @@
     <script src="https://r105.threejsfundamentals.org/threejs/resources/threejs/r105/js/loaders/GLTFLoader.js"></script>
     <script src="https://r105.threejsfundamentals.org/threejs/../3rdparty/dat.gui.min.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="selection_area_styles.css">
+    <style>
+        .svg-selection-area-container {
+            opacity: 100%;
+            overflow: visible;
+            margin-left: 5em;
+            margin-top: 6em;
+            margin-right: 7em;
+            max-width: 980px;
+            min-width: 400px;
+            height: auto;
+            /* perspective: 1000px; */
+            transform: perspective(1000px) rotateX(50deg);
+            /* transform: rotateX(60deg); */
+            /* transform-style: preserve-3d; */
+            transform-style: preserve-3d;
+            /* transform-origin: bottom; */
+            -webkit-transform-style: preserve-3d;
+            animation: 1.8s rotateMore 5s ease-in-out forwards;
+        }
+
+        .svg-selection-area-container svg {
+            position: absolute;
+            top: 2em;
+            left: 4em;
+        }
+
+        .svg-selection-area-container #a {
+            transform: translateZ(80px);
+            animation: 2s svg-appear 3.8s forwards;
+            opacity: 0%;
+        }
+
+        .svg-selection-area-container #b {
+            transform: translateZ(60px);
+            animation: 2s svg-appear 3.8s forwards;
+            opacity: 0%;
+        }
+
+        .svg-selection-area-container #c {
+            transform: translateZ(0px);
+            animation: 2s svg-appear 3.8s forwards;
+            opacity: 0%;
+        }
+        @keyframes rotateMore {
+            to{
+                transform: perspective(1000px) rotateX(15deg);
+                /* transform-origin: center; */
+            }
+        }
+        @keyframes svg-appear{
+            to{
+                opacity: 100%;
+            }
+        }
+
+        .selections{
+            /* position: absolute; */
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+        .selections .item{
+            width: 20%;
+            height: 20%;
+            border: solid black 2px;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -30,19 +97,6 @@
         </svg>
     </div>
     <script src="viewbox.js"></script>
-
-    <div class="main-selection-area" id="mainSelectionArea">
-        <div class="selection"></div>
-        <div class="selection"></div>
-        <div class="selection"></div>
-        <div class="selection"></div>
-        <div class="selection"></div>
-        <div class="selection"></div>
-        <div class="selection"></div>
-        <div class="selection"></div>
-        <div class="selection"></div>
-        <div class="selection"></div>
-    </div>
     <script>
         //animate opacity of main selection area and rotation on first hover
         let mainSelectionArea = document.getElementById('mainSelectionArea');
@@ -52,6 +106,126 @@
         }
         mainSelectionArea.addEventListener('mouseover', onMainSelectionAreaFocus);
     </script>
+    <div class="svg-selection-area-container">
+        <svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 791.93 470.25">
+            <defs>
+                <style>
+                    .b {
+                        fill: #7f3f98;
+                    }
+
+                    .b,
+                    .c {
+                        stroke: #7f3f98;
+                        stroke-miterlimit: 10;
+                    }
+
+                    .c {
+                        fill: none;
+                    }
+                </style>
+            </defs>
+            <path class="c"
+                d="M22.19,57.47L56.23,23.09H249.6l84.98,87.78,18.5,19.11h84.77l103.49-106.89h193.02l34.38,34.38" />
+            <polygon class="b"
+                points="334.58 110.87 343.3 110.87 348.4 116.45 442.62 116.45 447.72 110.87 456.36 110.87 437.85 129.98 353.09 129.98 334.58 110.87" />
+            <polygon class="b"
+                points="242.7 23.09 245 25.55 248.83 25.55 252.91 29.89 256.19 29.89 249.6 23.09 242.7 23.09" />
+            <polygon class="b"
+                points="533.26 31.43 539.64 31.43 543.72 27.09 588.4 27.09 594.02 23.09 541.34 23.09 533.26 31.43" />
+            <path class="c" d="M63.21,34.23L22.11,75.34v89.11l10.72,11.23v112.85l-10.72,10.98v89.36l41.11,41.87" />
+            <polygon class="b" points="33.6 150.91 22.11 139.43 22.11 164.45 32.83 175.68 33.6 150.91" />
+            <path class="c"
+                d="M727.3,34.23l40.85,40.85,.41,61.02,.19,28.6-11.57,11.49v112.34l11.57,11.74v89.62l-41.45,40.85" />
+            <polygon class="b" points="756.4 147.85 768.55 136.11 768.74 164.7 757.17 176.19 756.4 147.85" />
+            <polyline class="c"
+                points="768.74 412.62 734.19 447.34 535.81 447.34 517.68 429.98 301.68 429.98 272.83 429.98 255.47 447.34 57.09 447.34 22.11 412.62" />
+            <polygon class="b"
+                points="297.6 434.32 301.68 429.98 272.83 429.98 255.47 447.34 237.85 447.34 240.66 450.91 259.55 450.91 275.64 434.32 297.6 434.32" />
+            <polygon class="b"
+                points="489.6 429.98 517.68 429.98 535.81 447.34 552.66 447.34 549.85 451.17 531.98 451.17 516.15 435.09 493.17 434.83 489.6 429.98" />
+        </svg>
+        <svg id="b" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 791.93 470.25">
+            <defs>
+                <style>
+                    .b {
+                        fill: #7f3f98;
+                        opacity: .26;
+                        stroke: #7f3f98;
+                        stroke-miterlimit: 10;
+                    }
+                </style>
+            </defs>
+            <polygon class="b"
+                points="306.28 27.85 293 42.15 250.62 42.15 235.3 60.53 356.32 186.15 433.94 186.15 555.47 60.53 540.15 42.15 497.26 42.66 485 27.85 306.28 27.85" />
+            <polygon class="b"
+                points="333.34 222.91 110.7 222.91 68.83 263.26 68.83 297.98 48.91 318.4 48.91 363.85 102.53 417.47 248.57 417.47 369.09 284.19 333.34 222.91" />
+            <polygon class="b"
+                points="457.43 222.91 421.17 282.66 541.68 417.47 688.74 417.47 742.36 363.34 742.36 320.19 721.43 299.51 721.43 264.28 681.09 222.91 457.43 222.91" />
+        </svg>
+        <svg id="c" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 793.29 471.25">
+            <defs>
+                <style>
+                    .b {
+                        fill: #7f3f98;
+                        opacity: .43;
+                    }
+
+                    .b,
+                    .c {
+                        stroke: #7f3f98;
+                        stroke-miterlimit: 10;
+                    }
+
+                    .c {
+                        fill: none;
+                    }
+                </style>
+            </defs>
+            <polygon class="b"
+                points=".86 26.82 14.03 13.54 22.2 13.54 34.97 .5 283.65 .5 290.8 7.93 501.18 8.44 509.35 .5 758.03 .5 770.29 13.66 778.46 13.66 792.75 26.05 792.79 445.54 778.97 457.8 770.29 457.8 759.56 470.75 511.9 470.75 501.69 459.33 290.8 459.33 281.1 470.75 33.44 470.75 22.2 457.29 13.52 457.29 .86 445.54 .86 26.82" />
+            <g>
+                <line class="c" x1="14" y1="415.44" x2="778.93" y2="415.44" />
+                <line class="c" x1="14" y1="394.29" x2="778.93" y2="394.29" />
+                <line class="c" x1="14" y1="373.13" x2="778.93" y2="373.13" />
+                <line class="c" x1="14" y1="351.98" x2="778.93" y2="351.98" />
+                <line class="c" x1="14" y1="330.82" x2="778.93" y2="330.82" />
+                <line class="c" x1="14" y1="309.67" x2="778.93" y2="309.67" />
+                <line class="c" x1="14" y1="288.51" x2="778.93" y2="288.51" />
+                <line class="c" x1="14" y1="267.36" x2="778.93" y2="267.36" />
+                <line class="c" x1="14" y1="246.2" x2="778.93" y2="246.2" />
+                <line class="c" x1="14" y1="225.05" x2="778.93" y2="225.05" />
+                <line class="c" x1="14" y1="203.89" x2="778.93" y2="203.89" />
+                <line class="c" x1="14" y1="182.74" x2="778.93" y2="182.74" />
+                <line class="c" x1="14" y1="161.58" x2="778.93" y2="161.58" />
+                <line class="c" x1="14" y1="140.43" x2="778.93" y2="140.43" />
+                <line class="c" x1="14" y1="119.27" x2="778.93" y2="119.27" />
+                <line class="c" x1="14" y1="98.12" x2="778.93" y2="98.12" />
+                <line class="c" x1="14" y1="76.96" x2="778.93" y2="76.96" />
+                <line class="c" x1="14" y1="55.81" x2="778.93" y2="55.81" />
+                <line class="c" x1="706.08" y1="13.5" x2="706.08" y2="457.75" />
+                <line class="c" x1="669.66" y1="13.5" x2="669.66" y2="457.75" />
+                <line class="c" x1="633.23" y1="13.5" x2="633.23" y2="457.75" />
+                <line class="c" x1="596.81" y1="13.5" x2="596.81" y2="457.75" />
+                <line class="c" x1="560.38" y1="13.5" x2="560.38" y2="457.75" />
+                <line class="c" x1="523.95" y1="13.5" x2="523.95" y2="457.75" />
+                <line class="c" x1="487.53" y1="30.09" x2="487.53" y2="434.52" />
+                <line class="c" x1="451.1" y1="30.09" x2="451.1" y2="434.52" />
+                <line class="c" x1="414.68" y1="30.09" x2="414.68" y2="434.52" />
+                <line class="c" x1="378.25" y1="30.09" x2="378.25" y2="434.52" />
+                <line class="c" x1="341.83" y1="30.09" x2="341.83" y2="434.52" />
+                <line class="c" x1="305.4" y1="30.09" x2="305.4" y2="434.52" />
+                <line class="c" x1="268.98" y1="13.5" x2="268.98" y2="457.75" />
+                <line class="c" x1="232.55" y1="13.5" x2="232.55" y2="457.75" />
+                <line class="c" x1="196.13" y1="13.5" x2="196.13" y2="457.75" />
+                <line class="c" x1="159.7" y1="13.5" x2="159.7" y2="457.75" />
+                <line class="c" x1="123.27" y1="13.5" x2="123.27" y2="457.75" />
+                <line class="c" x1="86.85" y1="13.5" x2="86.85" y2="457.75" />
+            </g>
+            <polygon class="c"
+                points=".5 26.82 14 13.5 21.84 13.54 34.61 .5 283.29 .5 290.44 7.93 500.82 8.44 508.99 .5 757.67 .5 769.93 13.66 778.93 13.5 792.75 26.05 792.79 445.54 778.93 457.75 769.93 457.8 759.2 470.75 511.54 470.75 501.33 459.33 290.44 459.33 280.73 470.75 33.07 470.75 21.84 457.29 14 457.75 .5 445.54 .5 26.82" />
+        </svg>
+    </div>
 </body>
 
 </html>
