@@ -10,57 +10,87 @@
         .svg-container {
             margin: 3em auto;
             width: 700px;
-            height: auto;
-            /* perspective: 1000px; */
+            height: fit-content;
             transform: perspective(1000px) rotateX(40deg);
-            /* transform: rotateX(60deg); */
             transform-style: preserve-3d;
             transform-origin: bottom;
             animation: 1s rotateMore 2s ease-in-out forwards;
         }
-
+    
         .svg-container svg {
+            width: inherit;
+            height: inherit;
             position: absolute;
             top: 2em;
             left: 4em;
+        }
+        .svg-container #images{
+            transform: translateZ(88px);
         }
 
         .svg-container #a {
             transform: translateZ(80px);
         }
-
+    
         .svg-container #b {
             transform: translateZ(60px);
         }
-
+    
         .svg-container #c {
             transform: translateZ(0px);
         }
+    
         @keyframes rotateMore {
-            to{
+            to {
                 transform: perspective(1000px) rotateX(15deg);
                 transform-origin: bottom;
             }
         }
-
-        .selections{
-            /* position: absolute; */
+        #images{
             display: flex;
-            width: 100%;
-            height: 100%;
+            flex-wrap: wrap;
         }
-        .selections .item{
-            width: 20%;
-            height: 20%;
-            border: solid black 2px;
+       #images foreignObject {
+           transform-style: preserve-3d;
+            x: 20;
+            y: 30;
+            width: 100vw;
+            height: 90vh;
         }
-
+        #images .object2{
+            y: 220;
+        }
+        foreignObject img{
+            border: solid 2px black;
+            border-radius: 1em;
+            margin: 1.6em;
+            width: 190px;
+            height: 170px;
+            opacity: 30%;
+            transition: all 1s;
+        }   
+        foreignObject img:hover{
+            transition: all 1s;
+            opacity: 100%;
+        }
     </style>
 </head>
 
 <body>
     <div class="svg-container">
         <!-- <?xml version="1.0" encoding="UTF-8"?> -->
+        <svg id="images" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 791.93 470.25">
+            <foreignObject>
+                <image src="divergence1.png" alt=""/>
+                <image src="divergence1.png" alt=""/>
+                <image src="divergence1.png" alt=""/>
+        </foreignObject>
+        <foreignObject class="object2">
+                <image src="divergence1.png" alt=""/>
+                <image src="divergence1.png" alt=""/>
+                <image src="divergence1.png" alt=""/>
+        </foreignObject>
+        </svg>
         <svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 791.93 470.25">
             <defs>
                 <style>
