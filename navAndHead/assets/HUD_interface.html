@@ -9,14 +9,14 @@
     <style>
         .svg-container {
             margin: 3em auto;
-            width: 900px;
+            width: 760px;
             height: fit-content;
             transform: perspective(1000px) rotateX(40deg);
             transform-style: preserve-3d;
             transform-origin: bottom;
             animation: 1s rotateMore 2s ease-in-out forwards;
         }
-    
+
         .svg-container svg {
             width: inherit;
             height: inherit;
@@ -24,61 +24,63 @@
             top: 2em;
             left: 4em;
         }
-        .svg-container #images{
-            transform: translateZ(95px);
-            animation: 2.5s images-appear 1s forwards;
+
+        .svg-container #images {
+            transform: translateZ(295px);
+            animation: 1.5s images-appear 1s ease-out forwards;
             opacity: 0%;
         }
+
         @keyframes images-appear {
-            to{
+            to {
                 opacity: 100%;
+                transform: translateZ(95px);
             }
         }
+
         .svg-container #a {
             transform: translateZ(80px);
         }
-    
+
         .svg-container #b {
             transform: translateZ(60px);
         }
-    
+
         .svg-container #c {
             transform: translateZ(0px);
         }
-    
+
         @keyframes rotateMore {
             to {
                 transform: perspective(1000px) rotateX(10deg);
                 transform-origin: bottom;
             }
         }
-        #images{
+
+        #images {
             display: flex;
             flex-wrap: wrap;
         }
-       #images foreignObject {
-           margin: auto;
-            x: 20;
-            y: 30;
-            width: 100vw;
-            height: 90vh;
-        }
-        #images .object2{
+
+        #images .object2 {
             y: 220;
         }
-        #g1 rect{
+
+        #g1 rect {
             border: solid 2px black;
             border-radius: 1em;
             margin: 1.5em;
             opacity: 60%;
             transition: all 1s;
             src: "./divergence1.png";
-        }   
-        #g1 rect:hover{
+        }
+
+        #g1 rect:hover {
             transition: all 1s;
             opacity: 100%;
         }
-        rect{
+
+        rect {
             width: 300px;
             height: 160px;
         }
@@ -88,67 +90,59 @@
 <body>
     <div class="svg-container">
         <!-- <?xml version="1.0" encoding="UTF-8"?> -->
-        <!-- <svg id="images" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 791.93 470.25" preserveAspectRatio="xMidYMid meet"> -->
-        <svg id="images" xmlns="http://www.w3.org/2000/svg" viewBox="760 0 791.93 470.25" preserveAspectRatio="xMidYMid meet">
+
+        <!-- <svg id="images" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 791.93 470.25"> -->
+            <svg id="images" xmlns="http://www.w3.org/2000/svg" viewBox="760 0 791.93 470.25">
             <g id="g1">
                 <defs>
                     <!-- items 1-4  -->
                     <pattern id="img1" width="100%" height="100%" viewBox="0 0 700 372">
-                      <image href="./images/dex_sized.png" x="0" y="0" />
+                        <image href="./images/dex_sized.png" x="0" y="0" />
                     </pattern>
                     <pattern id="img2" width="100%" height="100%" viewBox="0 0 700 372">
-                      <image href="./images/kritter_1_sized.png" x="0" y="0" />
+                        <image href="./images/kritter_1_sized.png" x="0" y="0" />
                     </pattern>
                     <pattern id="img3" width="100%" height="100%" viewBox="0 0 700 372">
-                      <image href="./images/bookmarks_util_sized.png" x="0" y="0" />
+                        <image href="./images/bookmarks_util_sized.png" x="0" y="0" />
                     </pattern>
                     <pattern id="img4" width="100%" height="100%" viewBox="0 0 700 372">
-                      <image href="./images/shaSpa_sized.png" x="0" y="0" />
+                        <image href="./images/shaSpa_sized.png" x="0" y="0" />
                     </pattern>
                     <!-- items 5-8  -->
-                    <pattern id="img1" width="100%" height="100%" viewBox="0 0 700 372">
-                      <image href="./images/sha_code_sized.png" x="0" y="0" />
+                    <pattern id="img5" width="100%" height="100%" viewBox="0 0 700 372">
+                        <image href="./images/sha_code_sized.png" x="0" y="0" />
                     </pattern>
-                    <pattern id="img2" width="100%" height="100%" viewBox="0 0 700 372">
-                      <image href="./images/kritter_1_sized.png" x="0" y="0" />
+                    <pattern id="img6" width="100%" height="100%" viewBox="0 0 700 372">
+                        <image href="./images/head_wire_sized.png" x="0" y="0" />
                     </pattern>
-                    <pattern id="img3" width="100%" height="100%" viewBox="0 0 700 372">
-                      <image href="./images/bookmarks_util_sized.png" x="0" y="0" />
+                    <pattern id="img7" width="100%" height="100%" viewBox="0 0 700 372">
+                        <image href="./images/git_bridge_sized.png" x="0" y="0" />
                     </pattern>
-                    <pattern id="img4" width="100%" height="100%" viewBox="0 0 700 372">
-                      <image href="./images/shaSpa_sized.png" x="0" y="0" />
+                    <pattern id="img8" width="100%" height="100%" viewBox="0 0 700 372">
+                        <image href="./images/shaSpa_sized.png" x="0" y="0" />
                     </pattern>
-                    <!-- items 8-12  -->
-                    <pattern id="img1" width="100%" height="100%" viewBox="0 0 700 372">
-                      <image href="./images/dex_sized.png" x="0" y="0" />
+                    <!-- items 9-12  -->
+                    <pattern id="img9" width="100%" height="100%" viewBox="0 0 700 372">
+                        <image href="./images/dex_sized.png" x="0" y="0" />
                     </pattern>
-                    <pattern id="img2" width="100%" height="100%" viewBox="0 0 700 372">
-                      <image href="./images/kritter_1_sized.png" x="0" y="0" />
+                    <pattern id="img10" width="100%" height="100%" viewBox="0 0 700 372">
+                        <image href="./images/kritter_1_sized.png" x="0" y="0" />
                     </pattern>
-                    <pattern id="img3" width="100%" height="100%" viewBox="0 0 700 372">
-                      <image href="./images/bookmarks_util_sized.png" x="0" y="0" />
+                    <pattern id="img11" width="100%" height="100%" viewBox="0 0 700 372">
+                        <image href="./images/bookmarks_util_sized.png" x="0" y="0" />
                     </pattern>
-                    <pattern id="img4" width="100%" height="100%" viewBox="0 0 700 372">
-                      <image href="./images/shaSpa_sized.png" x="0" y="0" />
+                    <pattern id="img12" width="100%" height="100%" viewBox="0 0 700 372">
+                        <image href="./images/shaSpa_sized.png" x="0" y="0" />
                     </pattern>
-                  </defs>
-                <!-- <rect x="60" y="70" width="300" height="160" rx="10" fill="url(#img1)"/>
-                <rect x="420" y="70" width="300" height="160" rx="10" fill="url(#img2)"/>
-                <rect x="60" y="245" width="300" height="160" rx="10" fill="url(#img3)"/>
-                <rect x="420" y="245" width="300" height="160" rx="10" fill="url(#img4)"/>
-                <rect x="780" y="70" width="300" height="160" rx="10" fill="url(#img1)"/>
-                <rect x="1140" y="70" width="300" height="160" rx="10" fill="url(#img2)"/>
-                <rect x="780" y="245" width="300" height="160" rx="10" fill="url(#img3)"/>
-                <rect x="1140" y="245" width="300" height="160" rx="10" fill="url(#img4)"/> -->
-                <rect x="60" y="70" rx="10" fill="url(#img1)"/>
-                <rect x="420" y="70" rx="10" fill="url(#img2)"/>
-                <rect x="60" y="245" rx="10" fill="url(#img3)"/>
-                <rect x="420" y="245" rx="10" fill="url(#img4)"/>
-                <rect x="820" y="70" rx="10" fill="url(#img1)"/>
-                <rect x="1180" y="70" rx="10" fill="url(#img2)"/>
-                <rect x="820" y="245" rx="10" fill="url(#img3)"/>
-                <rect x="1180" y="245" rx="10" fill="url(#img4)"/>
-
+                </defs>
+                <rect x="60" y="48" rx="10" fill="url(#img1)" />
+                <rect x="420" y="48" rx="10" fill="url(#img2)" />
+                <rect x="60" y="223" rx="10" fill="url(#img3)" />
+                <rect x="420" y="223" rx="10" fill="url(#img4)" />
+                <rect x="820" y="48" rx="10" fill="url(#img6)" />
+                <rect x="1180" y="48" rx="10" fill="url(#img5)" />
+                <rect x="820" y="223" rx="10" fill="url(#img7)" />
+                <rect x="1180" y="223" rx="10" fill="url(#img8)" />
             </g>
         </svg>
         <svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 791.93 470.25">
@@ -269,6 +263,27 @@
             <polygon class="c"
                 points=".5 26.82 14 13.5 21.84 13.54 34.61 .5 283.29 .5 290.44 7.93 500.82 8.44 508.99 .5 757.67 .5 769.93 13.66 778.93 13.5 792.75 26.05 792.79 445.54 778.93 457.75 769.93 457.8 759.2 470.75 511.54 470.75 501.33 459.33 290.44 459.33 280.73 470.75 33.07 470.75 21.84 457.29 14 457.75 .5 445.54 .5 26.82" />
         </svg>
+        <!-- <svg>
+        <symbol id="button_sym_1">
+            <defs>
+                <style>
+                    .b {
+                        fill: #21032d;
+                        stroke: #13011a;
+                        stroke-miterlimit: 10;
+                        stroke-width: 1.37px;
+                    }
+                </style>
+            </defs>
+            <circle class="b" cx="174.07" cy="438.43" r="11.69" />
+            <path class="b" d="M145.8,430.5c-.35,.02-.7,.04-1.05,.07,.34-.05,.69-.07,1.05-.07Z" />
+            <path class="b"
+                d="M153.74,438.44c0,4.38-3.55,7.93-7.94,7.93l-1.02-.07-45.68-3.02c-1.49,0-2.82-.67-3.7-1.73l-6.65-3.11,6.65-3.11c.88-1.06,2.21-1.74,3.7-1.74l45.61-3.02h.04c.35-.03,.7-.05,1.05-.07,4.39,0,7.94,3.55,7.94,7.94Z" />
+            <ellipse class="b" cx="77.24" cy="438.43" rx="3.84" ry="2.42" />
+        </symbol>
+        <use id="button1" class="button" href="#button_sym_1" />
+        <use id="button2" class="button" href="#button_sym_1" />
+    </svg> -->
     </div>
 </body>
 
