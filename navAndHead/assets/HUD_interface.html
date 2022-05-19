@@ -9,7 +9,7 @@
     <style>
         .svg-container {
             margin: 3em auto;
-            width: 700px;
+            width: 900px;
             height: fit-content;
             transform: perspective(1000px) rotateX(40deg);
             transform-style: preserve-3d;
@@ -25,9 +25,15 @@
             left: 4em;
         }
         .svg-container #images{
-            transform: translateZ(88px);
+            transform: translateZ(95px);
+            animation: 2.5s images-appear 1s forwards;
+            opacity: 0%;
         }
-
+        @keyframes images-appear {
+            to{
+                opacity: 100%;
+            }
+        }
         .svg-container #a {
             transform: translateZ(80px);
         }
@@ -42,7 +48,7 @@
     
         @keyframes rotateMore {
             to {
-                transform: perspective(1000px) rotateX(15deg);
+                transform: perspective(1000px) rotateX(10deg);
                 transform-origin: bottom;
             }
         }
@@ -51,7 +57,7 @@
             flex-wrap: wrap;
         }
        #images foreignObject {
-           transform-style: preserve-3d;
+           margin: auto;
             x: 20;
             y: 30;
             width: 100vw;
@@ -60,18 +66,21 @@
         #images .object2{
             y: 220;
         }
-        foreignObject img{
+        #g1 rect{
             border: solid 2px black;
             border-radius: 1em;
-            margin: 1.6em;
-            width: 190px;
-            height: 170px;
-            opacity: 30%;
+            margin: 1.5em;
+            opacity: 60%;
             transition: all 1s;
+            src: "./divergence1.png";
         }   
-        foreignObject img:hover{
+        #g1 rect:hover{
             transition: all 1s;
             opacity: 100%;
+        }
+        rect{
+            width: 300px;
+            height: 160px;
         }
     </style>
 </head>
@@ -79,17 +88,68 @@
 <body>
     <div class="svg-container">
         <!-- <?xml version="1.0" encoding="UTF-8"?> -->
-        <svg id="images" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 791.93 470.25">
-            <foreignObject>
-                <image src="divergence1.png" alt=""/>
-                <image src="divergence1.png" alt=""/>
-                <image src="divergence1.png" alt=""/>
-        </foreignObject>
-        <foreignObject class="object2">
-                <image src="divergence1.png" alt=""/>
-                <image src="divergence1.png" alt=""/>
-                <image src="divergence1.png" alt=""/>
-        </foreignObject>
+        <!-- <svg id="images" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 791.93 470.25" preserveAspectRatio="xMidYMid meet"> -->
+        <svg id="images" xmlns="http://www.w3.org/2000/svg" viewBox="760 0 791.93 470.25" preserveAspectRatio="xMidYMid meet">
+            <g id="g1">
+                <defs>
+                    <!-- items 1-4  -->
+                    <pattern id="img1" width="100%" height="100%" viewBox="0 0 700 372">
+                      <image href="./images/dex_sized.png" x="0" y="0" />
+                    </pattern>
+                    <pattern id="img2" width="100%" height="100%" viewBox="0 0 700 372">
+                      <image href="./images/kritter_1_sized.png" x="0" y="0" />
+                    </pattern>
+                    <pattern id="img3" width="100%" height="100%" viewBox="0 0 700 372">
+                      <image href="./images/bookmarks_util_sized.png" x="0" y="0" />
+                    </pattern>
+                    <pattern id="img4" width="100%" height="100%" viewBox="0 0 700 372">
+                      <image href="./images/shaSpa_sized.png" x="0" y="0" />
+                    </pattern>
+                    <!-- items 5-8  -->
+                    <pattern id="img1" width="100%" height="100%" viewBox="0 0 700 372">
+                      <image href="./images/sha_code_sized.png" x="0" y="0" />
+                    </pattern>
+                    <pattern id="img2" width="100%" height="100%" viewBox="0 0 700 372">
+                      <image href="./images/kritter_1_sized.png" x="0" y="0" />
+                    </pattern>
+                    <pattern id="img3" width="100%" height="100%" viewBox="0 0 700 372">
+                      <image href="./images/bookmarks_util_sized.png" x="0" y="0" />
+                    </pattern>
+                    <pattern id="img4" width="100%" height="100%" viewBox="0 0 700 372">
+                      <image href="./images/shaSpa_sized.png" x="0" y="0" />
+                    </pattern>
+                    <!-- items 8-12  -->
+                    <pattern id="img1" width="100%" height="100%" viewBox="0 0 700 372">
+                      <image href="./images/dex_sized.png" x="0" y="0" />
+                    </pattern>
+                    <pattern id="img2" width="100%" height="100%" viewBox="0 0 700 372">
+                      <image href="./images/kritter_1_sized.png" x="0" y="0" />
+                    </pattern>
+                    <pattern id="img3" width="100%" height="100%" viewBox="0 0 700 372">
+                      <image href="./images/bookmarks_util_sized.png" x="0" y="0" />
+                    </pattern>
+                    <pattern id="img4" width="100%" height="100%" viewBox="0 0 700 372">
+                      <image href="./images/shaSpa_sized.png" x="0" y="0" />
+                    </pattern>
+                  </defs>
+                <!-- <rect x="60" y="70" width="300" height="160" rx="10" fill="url(#img1)"/>
+                <rect x="420" y="70" width="300" height="160" rx="10" fill="url(#img2)"/>
+                <rect x="60" y="245" width="300" height="160" rx="10" fill="url(#img3)"/>
+                <rect x="420" y="245" width="300" height="160" rx="10" fill="url(#img4)"/>
+                <rect x="780" y="70" width="300" height="160" rx="10" fill="url(#img1)"/>
+                <rect x="1140" y="70" width="300" height="160" rx="10" fill="url(#img2)"/>
+                <rect x="780" y="245" width="300" height="160" rx="10" fill="url(#img3)"/>
+                <rect x="1140" y="245" width="300" height="160" rx="10" fill="url(#img4)"/> -->
+                <rect x="60" y="70" rx="10" fill="url(#img1)"/>
+                <rect x="420" y="70" rx="10" fill="url(#img2)"/>
+                <rect x="60" y="245" rx="10" fill="url(#img3)"/>
+                <rect x="420" y="245" rx="10" fill="url(#img4)"/>
+                <rect x="820" y="70" rx="10" fill="url(#img1)"/>
+                <rect x="1180" y="70" rx="10" fill="url(#img2)"/>
+                <rect x="820" y="245" rx="10" fill="url(#img3)"/>
+                <rect x="1180" y="245" rx="10" fill="url(#img4)"/>
+
+            </g>
         </svg>
         <svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 791.93 470.25">
             <defs>
