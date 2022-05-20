@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HUD experiment</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <style>
         .svg-container {
             margin: 3em auto;
@@ -34,7 +35,7 @@
         @keyframes images-appear {
             to {
                 opacity: 100%;
-                transform: translateZ(95px);
+                transform: translateZ(96px);
             }
         }
 
@@ -85,12 +86,13 @@
             height: 160px;
         }
 
-        #circle_1,
-        #circle_2 {
+        #right_button circle,
+        #left_button circle{
             /* opacity: 100%; */
             fill: #7f3f98;
             stroke: rgb(41, 4, 31);
-            animation: .7s infinite 5s alternate pulsing-circle;
+            opacity: 60%;
+            animation: .7s infinite 5s alternate pulsing-circle ease-in-out;
         }
 
         #images #circle_1:hover,
@@ -105,7 +107,7 @@
             }
 
             to {
-                opacity: 100%;
+                opacity: 95%;
             }
         }
     </style>
@@ -167,19 +169,23 @@
                 <rect x="1180" y="48" rx="10" fill="url(#img5)" />
                 <rect x="820" y="223" rx="10" fill="url(#img7)" />
                 <rect x="1180" y="223" rx="10" fill="url(#img8)" />
+                <rect x="1580" y="48" rx="10" fill="url(#img1)" />
+                <rect x="1940" y="48" rx="10" fill="url(#img5)" />
+                <rect x="1580" y="223" rx="10" fill="url(#img7)" />
+                <rect x="1940" y="223" rx="10" fill="url(#img2)" />
             </g>
-            <g #interface_buttons>
-                <g #left_button>
-                    <circle id="circle_1" cx="160" cy="407" r="14" />
-                    <circle id="circle_1" cx="160" cy="407" r="8" />
-                    <circle id="circle_1" cx="130" cy="407" r="8" />
-                    <circle id="circle_1" cx="130" cy="407" r="3" />
+            <g id="interface_buttons">
+                <g id="left_button">
+                    <circle class="left-button-circle" cx="160" cy="407" r="14" />
+                    <circle class="left-button-circle" cx="160" cy="407" r="8" />
+                    <circle class="left-button-circle" cx="130" cy="407" r="8" />
+                    <circle class="left-button-circle" cx="130" cy="407" r="3" />
                 </g>
-                <g #right_button>
-                    <circle id="circle_2" cx="618" cy="407" r="14" />
-                    <circle id="circle_2" cx="618" cy="407" r="8" />
-                    <circle id="circle_2" cx="648" cy="407" r="8" />
-                    <circle id="circle_2" cx="648" cy="407" r="3" />
+                <g id="right_button">
+                    <circle class="right-button-circle" cx="618" cy="407" r="14" />
+                    <circle class="right-button-circle" cx="618" cy="407" r="8" />
+                    <circle class="right-button-circle" cx="648" cy="407" r="8" />
+                    <circle class="right-button-circle" cx="648" cy="407" r="3" />
                 </g>
             </g>
         </svg>
@@ -302,6 +308,6 @@
                 points=".5 26.82 14 13.5 21.84 13.54 34.61 .5 283.29 .5 290.44 7.93 500.82 8.44 508.99 .5 757.67 .5 769.93 13.66 778.93 13.5 792.75 26.05 792.79 445.54 778.93 457.75 769.93 457.8 759.2 470.75 511.54 470.75 501.33 459.33 290.44 459.33 280.73 470.75 33.07 470.75 21.84 457.29 14 457.75 .5 445.54 .5 26.82" />
         </svg>
     </div>
+    <script src="selection_area_nav.js"></script>
 </body>
-
 </html>
