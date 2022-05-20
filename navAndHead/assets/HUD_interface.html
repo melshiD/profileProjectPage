@@ -84,6 +84,30 @@
             width: 300px;
             height: 160px;
         }
+
+        #circle_1,
+        #circle_2 {
+            /* opacity: 100%; */
+            fill: #7f3f98;
+            stroke: rgb(41, 4, 31);
+            animation: .7s infinite 5s alternate pulsing-circle;
+        }
+
+        #images #circle_1:hover,
+        #images #circle_2:hover {
+            transition: all 1s;
+            opacity: 100%;
+        }
+
+        @keyframes pulsing-circle {
+            from {
+                opacity: 60%;
+            }
+
+            to {
+                opacity: 100%;
+            }
+        }
     </style>
 </head>
 
@@ -91,8 +115,8 @@
     <div class="svg-container">
         <!-- <?xml version="1.0" encoding="UTF-8"?> -->
 
-        <!-- <svg id="images" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 791.93 470.25"> -->
-            <svg id="images" xmlns="http://www.w3.org/2000/svg" viewBox="760 0 791.93 470.25">
+        <svg id="images" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 791.93 470.25">
+            <!-- <svg id="images" xmlns="http://www.w3.org/2000/svg" viewBox="760 0 791.93 470.25"> -->
             <g id="g1">
                 <defs>
                     <!-- items 1-4  -->
@@ -143,6 +167,20 @@
                 <rect x="1180" y="48" rx="10" fill="url(#img5)" />
                 <rect x="820" y="223" rx="10" fill="url(#img7)" />
                 <rect x="1180" y="223" rx="10" fill="url(#img8)" />
+            </g>
+            <g #interface_buttons>
+                <g #left_button>
+                    <circle id="circle_1" cx="160" cy="407" r="14" />
+                    <circle id="circle_1" cx="160" cy="407" r="8" />
+                    <circle id="circle_1" cx="130" cy="407" r="8" />
+                    <circle id="circle_1" cx="130" cy="407" r="3" />
+                </g>
+                <g #right_button>
+                    <circle id="circle_2" cx="618" cy="407" r="14" />
+                    <circle id="circle_2" cx="618" cy="407" r="8" />
+                    <circle id="circle_2" cx="648" cy="407" r="8" />
+                    <circle id="circle_2" cx="648" cy="407" r="3" />
+                </g>
             </g>
         </svg>
         <svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 791.93 470.25">
@@ -263,27 +301,6 @@
             <polygon class="c"
                 points=".5 26.82 14 13.5 21.84 13.54 34.61 .5 283.29 .5 290.44 7.93 500.82 8.44 508.99 .5 757.67 .5 769.93 13.66 778.93 13.5 792.75 26.05 792.79 445.54 778.93 457.75 769.93 457.8 759.2 470.75 511.54 470.75 501.33 459.33 290.44 459.33 280.73 470.75 33.07 470.75 21.84 457.29 14 457.75 .5 445.54 .5 26.82" />
         </svg>
-        <!-- <svg>
-        <symbol id="button_sym_1">
-            <defs>
-                <style>
-                    .b {
-                        fill: #21032d;
-                        stroke: #13011a;
-                        stroke-miterlimit: 10;
-                        stroke-width: 1.37px;
-                    }
-                </style>
-            </defs>
-            <circle class="b" cx="174.07" cy="438.43" r="11.69" />
-            <path class="b" d="M145.8,430.5c-.35,.02-.7,.04-1.05,.07,.34-.05,.69-.07,1.05-.07Z" />
-            <path class="b"
-                d="M153.74,438.44c0,4.38-3.55,7.93-7.94,7.93l-1.02-.07-45.68-3.02c-1.49,0-2.82-.67-3.7-1.73l-6.65-3.11,6.65-3.11c.88-1.06,2.21-1.74,3.7-1.74l45.61-3.02h.04c.35-.03,.7-.05,1.05-.07,4.39,0,7.94,3.55,7.94,7.94Z" />
-            <ellipse class="b" cx="77.24" cy="438.43" rx="3.84" ry="2.42" />
-        </symbol>
-        <use id="button1" class="button" href="#button_sym_1" />
-        <use id="button2" class="button" href="#button_sym_1" />
-    </svg> -->
     </div>
 </body>
 
