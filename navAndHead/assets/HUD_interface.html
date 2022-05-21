@@ -8,6 +8,10 @@
     <title>HUD experiment</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <style>
+        body{
+            display: flex;
+            justify-content: space-between;
+        }
         .svg-container {
             margin: 10em 5em;
             width: 760px;
@@ -113,8 +117,10 @@
             }
         }
         #side_hud{
-            width: 300px;
-            height: 490px;
+            width: 600px;
+            height: auto;
+            margin: 5em;
+            transform: rotateY(30deg);
         }
     </style>
 </head>
@@ -347,3 +353,4 @@
 </html>
 
 <!-- WHEN YOU SIT BACK DOWN, BUILD THE SIDE-PANEL DISPLAY AND INTEGRATE EVERYTHING WITHOUT THROWING A FIT  -->
+<!-- USE THE SHAPEBUILDER FEATURE OF ILLUSTRATOR TO MAKE THE BIG LINES WITH A STROKE AND FILL  -->
