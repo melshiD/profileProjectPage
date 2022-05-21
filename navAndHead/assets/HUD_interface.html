@@ -9,7 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <style>
         .svg-container {
-            margin: 3em auto;
+            margin: 10em 5em;
             width: 760px;
             height: fit-content;
             transform: perspective(1000px) rotateX(40deg);
@@ -104,11 +104,17 @@
         @keyframes pulsing-circle {
             from {
                 opacity: 60%;
+                fill: #7f3f98;
             }
 
             to {
                 opacity: 95%;
+                fill: rgb(255, 206, 12);
             }
+        }
+        #side_hud{
+            width: 300px;
+            height: 490px;
         }
     </style>
 </head>
@@ -165,10 +171,12 @@
                 <rect x="420" y="48" rx="10" fill="url(#img2)" />
                 <rect x="60" y="223" rx="10" fill="url(#img3)" />
                 <rect x="420" y="223" rx="10" fill="url(#img4)" />
+
                 <rect x="820" y="48" rx="10" fill="url(#img6)" />
                 <rect x="1180" y="48" rx="10" fill="url(#img5)" />
                 <rect x="820" y="223" rx="10" fill="url(#img7)" />
                 <rect x="1180" y="223" rx="10" fill="url(#img8)" />
+
                 <rect x="1580" y="48" rx="10" fill="url(#img1)" />
                 <rect x="1940" y="48" rx="10" fill="url(#img5)" />
                 <rect x="1580" y="223" rx="10" fill="url(#img7)" />
@@ -308,6 +316,34 @@
                 points=".5 26.82 14 13.5 21.84 13.54 34.61 .5 283.29 .5 290.44 7.93 500.82 8.44 508.99 .5 757.67 .5 769.93 13.66 778.93 13.5 792.75 26.05 792.79 445.54 778.93 457.75 769.93 457.8 759.2 470.75 511.54 470.75 501.33 459.33 290.44 459.33 280.73 470.75 33.07 470.75 21.84 457.29 14 457.75 .5 445.54 .5 26.82" />
         </svg>
     </div>
+    <div id="side_hud">
+        <svg viewBox="200 260 360 450">
+        <!-- <svg viewBox="200 260 777 1036"> -->
+            <defs>
+                <style>
+                    .hud2-layer1-outline {
+                        stroke: #7f3f98;
+                        stroke-miterlimit: 10;
+                        stroke-width: 2px;
+                        fill: #7f3f98;
+                        fill-opacity: 0.4;
+                    }
+    
+                    .f {
+                        fill: #7f3f98;
+                        opacity: .3;
+                    }
+                </style>
+            </defs>
+    
+            <path class="hud2-layer1-outline"
+                d="M374,303l-10-24h-92.62l-60.26,24v152.36l11.23,13.14v59.5l-17.36,17v93.17l94,59.83h167.45l85.05-33.5v-116.2l-16-8.8-6.76-71,16.76-13,1-18-13-5-1-22,12-10v-83.01s-10.49-33.99-39.24-38.49-105.19,0-105.19,0l-7.56,24.5s-4,8-5,9,15-2,15-2l18-16h81s16,4,22,13,11,17,11,43-1,41-1,41l-21,20,13,142,12,8v94l-67,31h-26l-21-15h-64l-3,6-51,9-85-53v-87l15-15v-70l-11-14v-129l48-20h78l10,10,17.75,4.22-4.25-9.72Z" />
+            <path class="f"
+                d="M374,303l-10-24h-92.62l-60.26,24v152.36l11.23,13.14v59.5l-17.36,17v93.17l94,59.83h167.45l85.05-33.5v-116.2l-16-8.8-6.76-71,16.76-13,1-18-13-5-1-22,12-10v-83.01s-10.49-33.99-39.24-38.49-105.19,0-105.19,0l-7.56,24.5s-4,8-5,9,15-2,15-2l18-16h81s16,4,22,13,11,17,11,43-1,41-1,41l-21,20,13,142,12,8v94l-67,31h-26l-21-15h-64l-3,6-51,9-85-53v-87l15-15v-70l-11-14v-129l48-20h78l10,10,17.75,4.22-4.25-9.72Z" />
+        </svg>
+    </div>
     <script src="selection_area_nav.js"></script>
 </body>
 </html>
+
+<!-- WHEN YOU SIT BACK DOWN, BUILD THE SIDE-PANEL DISPLAY AND INTEGRATE EVERYTHING WITHOUT THROWING A FIT  -->
