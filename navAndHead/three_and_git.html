@@ -20,7 +20,7 @@
     <script src="https://r105.threejsfundamentals.org/threejs/../3rdparty/dat.gui.min.js"></script>
     <link rel="stylesheet" href="styles.css">
     <style>
-        .svg-selection-area-container {
+        .hud1-container {
             opacity: 100%;
             overflow: visible;
             margin-left: 5em;
@@ -29,43 +29,38 @@
             max-width: 45%;
             min-width: 400px;
             height: auto;
-            /* perspective: 1000px; */
             transform: perspective(1000px) rotateX(50deg);
-            /* transform: rotateX(60deg); */
-            /* transform-style: preserve-3d; */
             transform-style: preserve-3d;
-            /* transform-origin: bottom; */
             -webkit-transform-style: preserve-3d;
-            animation: 1.8s rotateMore 5s ease-in-out forwards;
+            /* animation: 1.8s rotateMore 5s ease-in-out forwards; */
         }
 
-        .svg-selection-area-container svg {
+        .hud1-container svg {
             position: absolute;
             top: 2em;
             left: 4em;
         }
 
-        .svg-selection-area-container #a {
+        .hud1-container #a {
             transform: translateZ(80px);
-            animation: 2s svg-appear 3.8s forwards;
-            opacity: 0%;
+            /* animation: 2s svg-appear 3.8s forwards;
+            opacity: 0%; */
         }
 
-        .svg-selection-area-container #b {
+        .hud1-container #b {
             transform: translateZ(60px);
-            animation: 2s svg-appear 3.8s forwards;
-            opacity: 0%;
+            /* animation: 2s svg-appear 3.8s forwards;
+            opacity: 0%; */
         }
 
-        .svg-selection-area-container #c {
+        .hud1-container #c {
             transform: translateZ(0px);
-            animation: 2s svg-appear 3.8s forwards;
-            opacity: 0%;
+            /* animation: 2s svg-appear 3.8s forwards;
+            opacity: 0%; */
         }
         @keyframes rotateMore {
             to{
                 transform: perspective(1000px) rotateX(15deg);
-                /* transform-origin: center; */
             }
         }
         @keyframes svg-appear{
@@ -90,23 +85,14 @@
 </head>
 
 <body>
-    <canvas id="theHead"></canvas>
+    <!-- <canvas id="theHead"></canvas>
     <script src="canvasCode.js"></script>
     <div class="svg-container">
         <svg viewBox="0 0 4160 560">
         </svg>
     </div>
-    <script src="viewbox.js"></script>
-    <script>
-        //animate opacity of main selection area and rotation on first hover
-        let mainSelectionArea = document.getElementById('mainSelectionArea');
-        let onMainSelectionAreaFocus = (e) => {
-            TweenMax.to(mainSelectionArea, 0.4, {rotationX: '0', transformOrigin: 'center'} );
-            console.log('hovering hovering hovering');
-        }
-        mainSelectionArea.addEventListener('mouseover', onMainSelectionAreaFocus);
-    </script>
-    <div class="svg-selection-area-container">
+    <script src="viewbox.js"></script> -->
+    <div class="hud1-container">
         <svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 791.93 470.25">
             <defs>
                 <style>

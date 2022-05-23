@@ -7,66 +7,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HUD 2</title>
     <style>
-        body {
-            transform: perspective(1000px) rotateY(-20deg);;
+        .hud2 {
+            width: 600px;
+            transform: perspective(1000px) rotateY(0deg);
             transform-style: preserve-3d;
+            animation: rotate-hud2 4s forwards;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
         }
-        svg{
+
+        @keyframes rotate-hud2 {
+            to {
+                transform: perspective(1000px) rotateY(-7deg);
+            }
+        }
+
+        .hud2 svg {
             /* transform-style: preserve-3d; */
             position: absolute;
+            right: 3em;
         }
 
         #hud2_grid {
-            transform: translateZ(13px);
+            transform: translateZ(-23px);
+        }
+
+        #selected_item_display rect {
+            width: 280px;
+            height: 159px;
         }
     </style>
 </head>
 
 <body>
-    <svg viewBox="200 260 360 450">
-        <defs>
-            <style>
-                .d {
-                    clip-path: url(#b);
-                }
+    <div class="hud2">
+        <svg viewBox="200 260 360 450">
+            <defs>
+                <style>
+                    .d {
+                        clip-path: url(#b);
+                    }
 
-                .e,
-                .f {
-                    fill: none;
-                }
+                    .e,
+                    .f {
+                        fill: none;
+                    }
 
-                .g {
-                    fill: #7f3f98;
-                }
+                    .g {
+                        fill: #7f3f98;
+                    }
 
-                .g,
-                .f {
-                    stroke: #7f3f98;
-                    stroke-miterlimit: 10;
-                }
-            </style>
-            <clipPath id="b">
-                <rect class="e" x="193.5" y="233.5" width="372" height="470" />
-            </clipPath>
-        </defs>
-        <g id="c">
-            <path class="g"
-                d="M551.5,309.09v353.82c0,19.11-15.48,34.59-34.59,34.59H246.09c-19.11,0-34.59-15.48-34.59-34.59V309.09c0-19.11,15.48-34.59,34.59-34.59h10.48l112.34,11h-118.42c-14.91,0-26.99,12.08-26.99,26.99v348.02c0,14.91,12.08,26.99,26.99,26.99H511.51c14.91,0,26.99-12.08,26.99-26.99V312.49c0-14.91-12.08-26.99-26.99-26.99h-112.47l98.56-11h19.31c19.11,0,34.59,15.48,34.59,34.59Z" />
-            <line class="f" x1="368.91" y1="285.5" x2="256.57" y2="274.5" />
-            <line class="f" x1="497.6" y1="274.5" x2="399.04" y2="285.5" />
-        </g>
-        <defs>
-            <style>
-                .b {
-                    fill: none;
-                    stroke: #7f3f98;
-                    stroke-miterlimit: 10;
-                    stroke-width: 1.03px;
-                }
-            </style>
-        </defs>
+                    .g,
+                    .f {
+                        stroke: #7f3f98;
+                        stroke-miterlimit: 10;
+                    }
+                </style>
+                <clipPath id="b">
+                    <rect class="e" x="193.5" y="233.5" width="372" height="470" />
+                </clipPath>
+            </defs>
+            <g>
+                <path class="g"
+                    d="M551.5,309.09v353.82c0,19.11-15.48,34.59-34.59,34.59H246.09c-19.11,0-34.59-15.48-34.59-34.59V309.09c0-19.11,15.48-34.59,34.59-34.59h10.48l112.34,11h-118.42c-14.91,0-26.99,12.08-26.99,26.99v348.02c0,14.91,12.08,26.99,26.99,26.99H511.51c14.91,0,26.99-12.08,26.99-26.99V312.49c0-14.91-12.08-26.99-26.99-26.99h-112.47l98.56-11h19.31c19.11,0,34.59,15.48,34.59,34.59Z" />
+                <line class="f" x1="368.91" y1="285.5" x2="256.57" y2="274.5" />
+                <line class="f" x1="497.6" y1="274.5" x2="399.04" y2="285.5" />
+            </g>
+            <defs>
+                <style>
+                    .b {
+                        fill: none;
+                        stroke: #7f3f98;
+                        stroke-miterlimit: 10;
+                        stroke-width: 1.03px;
+                    }
+                </style>
+            </defs>
         </svg>
-        <svg id="hud2_grid" viewBox="200 260 360 450">
+        <svg id="hud2_grid" viewBox="200 253 360 450">
             <rect class="b" x="229.5" y="290.5" width="303" height="390" rx="21.79" ry="21.79" />
             <g>
                 <rect class="b" x="244.5" y="303.5" width="274" height="364" />
@@ -134,7 +151,43 @@
                 <line class="b" x1="630.5" y1="452.5" x2="630.5" y2="453.5" />
                 <line class="b" x1="630.5" y1="452.5" x2="630.5" y2="453.5" />
             </g>
-    </svg>
+        </svg>
+        <svg id="selected_item_display" viewBox="0 0 360 450">
+            <defs>
+                <style type="text/css">
+                    @import url("https://fonts.googleapis.com/css2?family=Koulen");
+
+                    text {
+                        font-family: "koulen";
+                        font-size: 30px;
+                        text-shadow: rgb(52, 45, 45) 2px 2px 2px;
+                    }
+
+                    .synopsis {
+                        font-size: 16px;
+                        text-shadow: none;
+                    }
+
+                    .synopsis-content {
+                        font-size: 12px;
+                    }
+                </style>
+                <pattern id="img1" width="100%" height="100%" viewBox="0 0 700 372">
+                    <image href="./images/kritter_1_sized.png" x="0" y="0" />
+                </pattern>
+            </defs>
+            <!-- <text id="proj_name" class="monotype" x="45" y="66">City Kritters</text> -->
+            <rect x="40" y="40" rx="10" fill="url(#img1)" />
+            <rect x="40" y="220" rx="3" fill="#7f3f98" width="300" height="300" />
+            <g id="text_content">
+                <text class="synopsis-title" x="45" y="246">City Kritters</text>
+                <text class="synopsis-content" x="55" y="270">Lorem ipsum dolor sit amet consectetur adipisicing</text>
+                <text class="synopsis-content" x="55" y="283">Lorem ipsum dolor sit amet consectetur adipisicing</text>
+                <text class="synopsis-content" x="55" y="296">Lorem ipsum dolor sit amet consectetur adipisicing</text>
+                <g />
+
+        </svg>
+    </div>
 </body>
 
 </html>

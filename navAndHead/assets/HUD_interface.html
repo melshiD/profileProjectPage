@@ -13,7 +13,7 @@
             justify-content: space-between;
         }
 
-        .svg-container {
+        .hud1-container {
             margin: 10em 5em;
             width: 760px;
             height: fit-content;
@@ -23,7 +23,7 @@
             animation: 1s rotateMore 2s ease-in-out forwards;
         }
 
-        .svg-container svg {
+        .hud1-container svg {
             width: inherit;
             height: inherit;
             position: absolute;
@@ -31,7 +31,7 @@
             left: 4em;
         }
 
-        .svg-container #images {
+        .hud1-container #images {
             transform: translateZ(295px);
             animation: 1.5s images-appear 1s ease-out forwards;
             opacity: 0%;
@@ -44,15 +44,15 @@
             }
         }
 
-        .svg-container #a {
+        .hud1-container #a {
             transform: translateZ(80px);
         }
 
-        .svg-container #b {
+        .hud1-container #b {
             transform: translateZ(60px);
         }
 
-        .svg-container #c {
+        .hud1-container #c {
             transform: translateZ(0px);
         }
 
@@ -72,7 +72,7 @@
             y: 220;
         }
 
-        #g1 rect {
+        #image_group rect {
             border: solid 2px black;
             border-radius: 1em;
             margin: 1.5em;
@@ -81,7 +81,7 @@
             src: "./divergence1.png";
         }
 
-        #g1 rect:hover {
+        #image_group rect:hover {
             transition: all 1s;
             opacity: 100%;
         }
@@ -125,15 +125,45 @@
             transform: rotateY(30deg);
         }
     </style>
+        <style>
+            .hud2 {
+                width: 600px;
+                transform: perspective(1000px) rotateY(0deg);
+                transform-style: preserve-3d;
+                animation: rotate-hud2 4s forwards;
+                /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            }
+    
+            @keyframes rotate-hud2 {
+                to {
+                    transform: perspective(1000px) rotateY(-7deg);
+                }
+            }
+    
+            .hud2 svg {
+                /* transform-style: preserve-3d; */
+                position: absolute;
+                right: 3em;
+            }
+    
+            #hud2_grid {
+                transform: translateZ(-23px);
+            }
+    
+            #display_objects rect {
+                width: 280px;
+                height: 159px;
+            }
+        </style>
 </head>
 
 <body>
-    <div class="svg-container">
+    <div class="hud1-container">
         <!-- <?xml version="1.0" encoding="UTF-8"?> -->
 
         <svg id="images" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 791.93 470.25">
             <!-- <svg id="images" xmlns="http://www.w3.org/2000/svg" viewBox="760 0 791.93 470.25"> -->
-            <g id="g1">
+            <g id="image_group">
                 <defs>
                     <!-- items 1-4  -->
                     <pattern id="img1" width="100%" height="100%" viewBox="0 0 700 372">
@@ -322,30 +352,6 @@
             </g>
             <polygon class="c"
                 points=".5 26.82 14 13.5 21.84 13.54 34.61 .5 283.29 .5 290.44 7.93 500.82 8.44 508.99 .5 757.67 .5 769.93 13.66 778.93 13.5 792.75 26.05 792.79 445.54 778.93 457.75 769.93 457.8 759.2 470.75 511.54 470.75 501.33 459.33 290.44 459.33 280.73 470.75 33.07 470.75 21.84 457.29 14 457.75 .5 445.54 .5 26.82" />
-        </svg>
-    </div>
-    <div id="side_hud">
-        <svg viewBox="200 260 360 450">
-            <defs>
-                <style>
-                    .f {
-                        fill: none;
-                    }
-
-                    .g {
-                        fill: #7f3f98;
-                        fill-opacity: .3;
-                        stroke: #7f3f98;
-                        stroke-miterlimit: 10;
-                        stroke-opacity: .8;
-                    }
-                </style>
-            </defs>
-            <g id="c">
-                <path class="g"
-                    d="M551.5,309.09v353.82c0,19.11-15.48,34.59-34.59,34.59H246.09c-19.11,0-34.59-15.48-34.59-34.59V309.09c0-19.11,15.48-34.59,34.59-34.59h10.48l112.34,11h-118.42c-14.91,0-26.99,12.08-26.99,26.99v348.02c0,14.91,12.08,26.99,26.99,26.99H511.51c14.91,0,26.99-12.08,26.99-26.99V312.49c0-14.91-12.08-26.99-26.99-26.99h-112.47l98.56-11h19.31c19.11,0,34.59,15.48,34.59,34.59Z" 
-                />
-            </g>
         </svg>
     </div>
     <script src="selection_area_nav.js"></script>
