@@ -1,20 +1,50 @@
+*{
+    --head-size: 130px;
+}
 html,
 body {
     width: 100%;
     height: 100%;
     background-image: url('galaxyBackground.svg');
+    background-repeat: no-repeat;
     background-size: cover;
     transition: all 2s;
     background-color: #1d242c;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     /* transform-style: preserve-3d; */
+}
+body::-webkit-scrollbar{
+    display: none;
 }
 /*------- head div and associated keyframe  */
 /*------- end head div and associated keyframe  */
 /*------- git animation styles go here  --------*/
+#theHead {
+    /* animation: 2s fade-in 3s forwards; */
+    /* opacity: 0%; */
+    width: var(--head-size);
+    height: var(--head-size);
+    /* display: block; */
+    position: absolute;
+    top: 20px;
+    border: #8b949e 5px solid;
+    border-radius: 50%;
+    padding: 3px;
+    margin: 1em; 
+    overflow-x: hidden;
+    
+}
+.both-huds{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    /* height: 100vh; */
+}
 .hud1-container {
     margin: 10em 5em;
-    width: 760px;
+    /* width: 860px; */
+    width: 900px;
     height: fit-content;
     transform: perspective(1000px) rotateX(40deg);
     transform-style: preserve-3d;
@@ -113,10 +143,31 @@ rect {
     transition: all 1s;
     opacity: 100%;
 }
+/* hud2 styles  */
+.hud2-container {
+    width: 700px;
+    transform: perspective(500px) rotateY(0deg);
+    transform-style: preserve-3d;
+    animation: rotate-hud2 4s forwards;
+    margin-top: 3em;
+    margin-right: 3em;
+}
+@keyframes rotate-hud2 {
+    to {
+        transform: perspective(500px) rotateY(-7deg);
+    }
+}
 
-#side_hud {
-    width: 600px;
-    height: auto;
-    margin: 5em;
-    transform: rotateY(30deg);
+.hud2-container svg {
+    position: absolute;
+    /* right: 10em; */
+}
+
+#hud2_grid {
+    transform: translateZ(-33px);
+}
+
+#selected_item_display rect {
+    width: 280px;
+    height: 159px;
 }
