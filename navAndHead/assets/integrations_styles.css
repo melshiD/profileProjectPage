@@ -3,25 +3,27 @@
 }
 html,
 body {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-image: url('galaxyBackground.svg');
     background-repeat: no-repeat;
     background-size: cover;
     transition: all 2s;
     background-color: #1d242c;
-    /* overflow-x: hidden; */
-    /* transform-style: preserve-3d; */
+    -ms-overflow-style: none;  /* Hide scrollbar-> Internet Explorer 10+ */
+    scrollbar-width: none;  /* Hide scrollbar-> Firefox */
 }
-body::-webkit-scrollbar{
-    display: none;
+body::-webkit-scrollbar{ 
+    /* Hide scrollbar->  safari and chrome  */
+    display: none; 
 }
 /*------- head div and associated keyframe  */
 /*------- end head div and associated keyframe  */
 /*------- git animation styles go here  --------*/
 #theHead {
     /* animation: 2s fade-in 3s forwards; */
-    /* opacity: 0%; */
+    opacity: 0%;
+    animation: 2s hud2-and-head-appear 2.5s forwards;
     width: var(--head-size);
     height: var(--head-size);
     /* display: block; */
@@ -44,7 +46,7 @@ body::-webkit-scrollbar{
 .hud1-container {
     margin: 10em 5em;
     /* width: 860px; */
-    width: 900px;
+    width: 910px;
     height: fit-content;
     transform: perspective(1000px) rotateX(40deg);
     transform-style: preserve-3d;
@@ -100,22 +102,18 @@ body::-webkit-scrollbar{
 }
 
 #image_group rect {
+    width: 300px;
+    height: 160px;
     border: solid 2px black;
     border-radius: 1em;
     margin: 1.5em;
     opacity: 60%;
     transition: all 1s;
-    src: "./divergence1.png";
 }
 
 #image_group rect:hover {
     transition: all 1s;
     opacity: 100%;
-}
-
-rect {
-    width: 300px;
-    height: 160px;
 }
 
 #right_button circle,
@@ -143,14 +141,18 @@ rect {
     transition: all 1s;
     opacity: 100%;
 }
+
+
 /* hud2 styles  */
 .hud2-container {
     width: 700px;
-    transform: perspective(500px) rotateY(0deg);
-    transform-style: preserve-3d;
-    animation: rotate-hud2 4s forwards;
     margin-top: 3em;
     margin-right: 3em;
+    transform: perspective(500px) rotateY(0deg);
+    transform-origin: center;
+    /* animation: 2s rotate-hud2 3.5s forwards; */
+    transform-style: preserve-3d;
+
 }
 @keyframes rotate-hud2 {
     to {
@@ -160,14 +162,38 @@ rect {
 
 .hud2-container svg {
     position: absolute;
-    /* right: 10em; */
+    top: -1em;
+    opacity: 100;
+    /* opacity: 0; */
+    /* animation: 2s hud2-and-head-appear 2.5s forwards; */
 }
-
+@keyframes hud2-and-head-appear {
+    to{
+        opacity: 100%;
+    }
+}
 #hud2_grid {
-    transform: translateZ(-33px);
+    transform-style: preserve-3d;
+    transform: translateZ(-183px);
 }
 
 #selected_item_display rect {
     width: 280px;
     height: 159px;
+    transform: translateZ(-12px);
+}
+
+#text_content rect{
+    width: 67px;
+    height: 22px;
+}
+#text_content .visit-article{
+    transform: translateZ(112px);
+}
+.article-button-text{
+    font-size: 12px;
+    fill: pink;
+}
+#primary_display_space{
+    transition: all 2s;
 }

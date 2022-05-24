@@ -102,15 +102,16 @@ function main() {
 
             // update the Trackball controls to handle the new size
             // transControls.attach(gltf.scene);
-            window.addEventListener('mouseup', () => {
-                console.log(`x: ${root.position.x},
-                                     y: ${root.position.y},
-                                     z: ${root.position.z},
-                                     rot x: ${root.rotation.x},
-                                     rot y: ${root.rotation.y},
-                                     rot z: ${root.rotation.z},
-                                     `);
-            })
+            
+            // window.addEventListener('mouseup', () => {
+            //     console.log(`x: ${root.position.x},
+            //                          y: ${root.position.y},
+            //                          z: ${root.position.z},
+            //                          rot x: ${root.rotation.x},
+            //                          rot y: ${root.rotation.y},
+            //                          rot z: ${root.rotation.z},
+            //                          `);
+            // })
 
             // controls2.maxDistance = boxSize * 10;
             // controls2.target.copy(boxCenter);
