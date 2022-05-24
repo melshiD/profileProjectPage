@@ -164,8 +164,8 @@ body::-webkit-scrollbar{
     position: absolute;
     top: -1em;
     opacity: 100;
-    /* opacity: 0; */
-    /* animation: 2s hud2-and-head-appear 2.5s forwards; */
+    /* opacity: 0;
+    animation: 2s hud2-and-head-appear 2.5s forwards; */
 }
 @keyframes hud2-and-head-appear {
     to{
@@ -187,6 +187,10 @@ body::-webkit-scrollbar{
     width: 67px;
     height: 22px;
 }
+/* .text_content .visit-buttons .visit-article{
+    width: 67px;
+    height: 22px;
+} */
 #text_content .visit-article{
     transform: translateZ(112px);
 }
@@ -196,4 +200,7 @@ body::-webkit-scrollbar{
 }
 #primary_display_space{
     transition: all 2s;
+}
+.smaller-title{
+    font-size: 23px;
 }
