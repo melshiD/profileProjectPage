@@ -189,12 +189,6 @@ body::-webkit-scrollbar{
         display: none;
     }
 }
-@keyframes rotate-hud2 {
-    to {
-        transform: perspective(500px) rotateY(-7deg);
-    }
-}
-
 .hud2-container svg {
     position: absolute;
     top: -1em;
@@ -207,11 +201,13 @@ body::-webkit-scrollbar{
         opacity: 100%;
     }
 }
+/* #hud2_symbol_used{
+    width: 400px;
+} */
 #hud2_grid {
     transform-style: preserve-3d;
     transform: translateZ(-183px);
 }
-
 #selected_item_display rect {
     width: 280px;
     height: 159px;
@@ -229,14 +225,13 @@ body::-webkit-scrollbar{
 #text_content .visit-article{
     transform: translateZ(112px);
 }
-.visit-buttons .visit-article{
-    rx: "3";
-}
 .article-button-text{
     font-size: 12px;
     fill: pink;
 }
 #primary_display_space{
+    width: 300px;
+    height: 160px;
     transition: all 2s;
 }
 .smaller-title{
