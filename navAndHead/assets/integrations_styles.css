@@ -18,16 +18,12 @@ body::-webkit-scrollbar{
     /* Hide scrollbar->  safari and chrome  */
     display: none; 
 }
-/*------- head div and associated keyframe  */
-/*------- end head div and associated keyframe  */
-/*------- git animation styles go here  --------*/
 #theHead {
     /* animation: 2s fade-in 3s forwards; */
     opacity: 0%;
     animation: 2s hud2-and-head-appear 2.5s forwards;
     width: var(--head-size);
     height: var(--head-size);
-    /* display: block; */
     position: absolute;
     top: 20px;
     border: #8b949e 5px solid;
@@ -37,10 +33,10 @@ body::-webkit-scrollbar{
     overflow-x: hidden;
     
 }
-.melshtastic {
+.melshtastic-div {
     font-family: "orbitron";
     position: absolute;
-    top: 17px;
+    top: 170px;
     left: 200px;
     width: 100px;
     height: 150px;
@@ -206,6 +202,13 @@ body::-webkit-scrollbar{
     }
     .selections-as-grid .grid-item{
         width: 30%;
+    }
+    #theHead{
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        animation: none;
+        opacity: 100%;
     }
 }
 @media screen and (max-width: 1100px){
