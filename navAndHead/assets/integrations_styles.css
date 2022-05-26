@@ -9,7 +9,7 @@ body {
     background-image: url('galaxyBackground.svg');
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all 2s;
+    /* transition: all 2s; */
     background-color: #1d242c;
     -ms-overflow-style: none;  /* Hide scrollbar-> Internet Explorer 10+ */
     scrollbar-width: none;  /* Hide scrollbar-> Firefox */
@@ -162,9 +162,32 @@ body::-webkit-scrollbar{
     margin-right: 3em;
     transform: perspective(500px) rotateY(0deg);
     transform-origin: center;
-    /* animation: 2s rotate-hud2 3.5s forwards; */
     transform-style: preserve-3d;
-
+}
+@media screen and (max-width: 1900px){
+    .hud2-container{
+        width: 500px;
+        margin-top: 9em;
+    }
+}
+@media screen and (max-width: 1750px){
+    .hud2-container{
+        width: 400px;
+        margin-top: 9em;
+    }
+    .hud1-container{
+        width: 700px;
+        margin-left: 0.2em;
+    }
+}
+@media screen and (max-width: 1350px){
+    .hud2-container{
+        width: 400px;
+        margin-top: 9em;
+    }
+    .hud1-container{
+        display: none;
+    }
 }
 @keyframes rotate-hud2 {
     to {
@@ -176,8 +199,8 @@ body::-webkit-scrollbar{
     position: absolute;
     top: -1em;
     opacity: 100;
-    opacity: 0;
-    animation: 2s hud2-and-head-appear 2.5s forwards;
+    /* opacity: 0;
+    animation: 2s hud2-and-head-appear 2.5s forwards; */
 }
 @keyframes hud2-and-head-appear {
     to{
