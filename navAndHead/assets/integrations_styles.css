@@ -1,5 +1,5 @@
 *{
-    --head-size: 130px;
+    --head-size: 160px;
     --fun-border-gradient: linear-gradient(60deg, rgb(235, 10, 10) 0%, rgb(141, 64, 20) 35%, rgb(198, 152, 0) 100%);
 }
 html,
@@ -33,15 +33,21 @@ body::-webkit-scrollbar{
     overflow-x: hidden;
     
 }
-.melshtastic-div {
+.melshtastic-div{
+    position: relative;
+}
+.melshtastic-svg{
+    position: inherit;
+    top: 20px;
+    left: 230px;
+    width: 1100px;
+    height: 200px;
+}
+.melshtastic-svg text {
     font-family: "orbitron";
-    position: absolute;
-    top: 170px;
-    left: 200px;
-    width: 100px;
-    height: 150px;
-    font-size: 140px;
-    color: white;
+    font-style: italic;
+    font-size: 14px;
+    color: black;
 }
 .both-huds{
     position: absolute;
@@ -160,6 +166,11 @@ body::-webkit-scrollbar{
     transform-origin: center;
     transform-style: preserve-3d;
 }
+@media screen and (max-width: 2000px){
+    .melshtastic-svg text {
+        font-size: 12px;
+    }
+}
 @media screen and (max-width: 1900px){
     .hud2-container{
         width: 500px;
@@ -174,6 +185,10 @@ body::-webkit-scrollbar{
     .hud1-container{
         width: 700px;
         margin-left: 0.2em;
+    }
+    #theHead{
+        width: 130px;
+        height: 130px;
     }
 }
 .selections-as-grid{
@@ -209,6 +224,9 @@ body::-webkit-scrollbar{
         margin: 0 auto;
         animation: none;
         opacity: 100%;
+    }
+    .melshtastic-div{
+        display: none;
     }
 }
 @media screen and (max-width: 1100px){
