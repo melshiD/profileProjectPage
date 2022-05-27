@@ -6,38 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Static Noise Filler</title>
     <style>
-        section{
-            position: absolute;
-            top: 100px;
-            left: 300px;
-            width: 200px;
-            height: 200px;
-            background: repeating-linear-gradient(#111, #111 50%, #fff 50%, #fff);
-            background-size: 5px 5px;
+
+        p{
+            display: inline;
+            font-size: 320px;
+            color: white;
             filter: url(#noise);
+            animation: change-color 120s forwards;
         }
-        text{
-            font-size: 120px;
-            width: 120px;
-            height: 120px;
+        @keyframes  change-color{
+            to{
+                color: black;
+            }
         }
     </style>
 </head>
 <body>
-    <section>
-    </section>
-    <svg viewBox="0 0 120 120">
+
+    <svg viewBox="20 0 120 120" width="0">
         <defs>
-        <filter id="noise">
+        <filter id="noise" >
             <feTurbulence id="turbulence">
-                <animate attributeName="baseFrequency" dur="5s" values="19 19; 1.8 1.8; 1.9 1.9;" repeatCount="indefinite">
+                <animate attributeName="baseFrequency" dur="500s" values="19 19; 1.8 1.8; 1.9 1.9;" repeatCount="indefinite">
                 <!-- <animate attributeName="baseFrequency" dur="41s" values="0.9 0.9; 0.8 0.8; 0.9 0.9;" repeatCount="indefinite"> -->
                 </animate>
             </feTurbulence>
             <feDisplacementMap in="SourceGraphic" scale="60"></feDisplacementMap>
         </filter>
     </defs>
-    <text fill="url(#noise)">NOISE!</text>
+    <!-- <text fill="url(#noise)">NOISE!</text> -->
     </svg>
+    <p>Please</p>
 </body>
 </html>
