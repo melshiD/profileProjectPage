@@ -14,7 +14,7 @@
             display: block;
             margin: 0.1em;
             font-size: 90px;
-            filter: url(#myfilter);
+            filter: url(#noise_filter);
         }
     </style>
 </head>
@@ -49,6 +49,13 @@
                     result="FRACTAL-TEXTURE_20" />
                 <feComposite in="BEVEL_50" in2="FRACTAL-TEXTURE_20" operator="in"/>
             </filter>
+            <filter id="noise_filter">
+            <feTurbulence id="turbulence">
+                <animate attributeName="baseFrequency" dur="500s" values="19 19; 1.8 1.8; 1.9 1.9;" repeatCount="indefinite">
+                <!-- <animate attributeName="baseFrequency" dur="41s" values="0.9 0.9; 0.8 0.8; 0.9 0.9;" repeatCount="indefinite"> -->
+                </animate>
+            </feTurbulence>
+        </filter>
         </defs>
     </svg>
     <p>More text</p>
